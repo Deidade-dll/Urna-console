@@ -1,2 +1,2 @@
 # Urna-console
-urna
+uma simples urna usando banco de dados e py :)
