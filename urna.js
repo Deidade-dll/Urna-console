@@ -6,14 +6,14 @@ def votar():
     conn = sqlite3.connect("election.db")
     cursor = conn.cursor()
 
-    # Verificar voto
+    # Verif voto
     cursor.execute("SELECT * FROM votes WHERE voter_id=?", (voter_id,))
     if cursor.fetchone():
-        print("⚠️ Você já votou!")
+        print("⚠️ Você já votou!") 
         conn.close()
         return
 
-    # Listar candidatos
+    # List candidatos
     cursor.execute("SELECT * FROM candidates")
     candidates = cursor.fetchall()
 
